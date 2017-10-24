@@ -1,0 +1,14 @@
+#include <SFML/Graphics.hpp>
+
+int main()
+{
+
+    //Game engine
+    Engine engine;
+
+    //Run game
+    engine.star();
+
+    //Exits program
+    return 0;
+}

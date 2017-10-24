@@ -1,0 +1,25 @@
+#include "Engine.h";
+
+Engine::input()
+{
+    
+    //P
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    {
+        Player.moveLeftDirection();
+    }
+    else
+    {
+        Player.stopMovingLeft();
+    }
+
+    //Player walking to right
+    if (sf::KeyBoard::isKeyPressed(sf::Keyboard::D))
+    {
+        Player.moveRightDirection();
+    }
+    else
+    {
+        Player.stopMovingRight();
+    }
+}
