@@ -2,13 +2,11 @@
 
 Engine::Engine()
 {
-    sf::Vector2f resolution;
-
-    resolution.x = sf::VideoMode::getDesktopMode().width;
-    resolution.y = sf::VideoMode::getDesktopMode().height;
+    _resolution.x = sf::VideoMode::getDesktopMode().width;
+    _resolution.y = sf::VideoMode::getDesktopMode().height;
 
     // Creates game screen
-    game_screen.create(sf::VideoMode(resolution.x, resolution.y), "RPG beta", sf::Style::Fullscreen);
+    game_screen.create(sf::VideoMode(_resolution.x, _resolution.y), "RPG beta", sf::Style::Fullscreen);
 
     // Loads and sets background
     game_background_t.loadFromFile("background.jpg");
@@ -18,15 +16,12 @@ Engine::Engine()
 
 void Engine::run()
 {
-    //Game update timer
-    sf::Clock clock;
 
     while (game_screen.isOpen())
     {
+        _timer = _clock.restart();
 
-        sf::Time timer = clock.restart();
-
-        float secTimer =  timer.asSeconds();
+        float secTimer =  _timer.asSeconds();
 
         input();
         update(secTimer);

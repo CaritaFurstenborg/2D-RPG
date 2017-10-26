@@ -44,9 +44,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 			<Add directory="C:/Users/Krulcifer/Desktop/Codeblockslib/include" />
+			<Add directory="C:/Users/Carita/Documents/DevGameLibraries/SFML-2.4.2 CB/include" />
 		</Compiler>
 		<Linker>
 			<Add directory="C:/Users/Krulcifer/Desktop/Codeblockslib/lib" />
+			<Add directory="C:/Users/Carita/Documents/DevGameLibraries/SFML-2.4.2 CB/lib" />
 		</Linker>
 		<Unit filename="Draw.cpp">
 			<Option target="Debug" />

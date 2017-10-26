@@ -23,6 +23,16 @@ void Engine::input()
         player.stopMovingRight();
     }
 
+    //Player jump
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+    {
+        player.jump();
+    }
+    else
+    {
+        player.stopJump();
+    }
+
     //Quit game
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {

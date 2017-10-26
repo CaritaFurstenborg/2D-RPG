@@ -13,6 +13,7 @@ private:
 
     bool isLeftKeyDown;
     bool isRightKeyDown;
+    bool isSpaceKeyDown;
 
     float p_speed;
 
@@ -24,9 +25,11 @@ public:
 
     void moveLeftDirection();
     void moveRightDirection();
+    void jump();
 
     void stopMovingLeft();
     void stopMovingRight();
+    void stopJump();
 
     void update(float moveTimer);
 
