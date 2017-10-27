@@ -1,15 +1,17 @@
 #include "Player.h"
 
+
 Player::Player()
 {
-
     //Declares player movement speed
-    p_speed = 2000;
+    p_speed = 1000;
 
     //Player location(Left to right)
     p_position.x = 100;
     //Player location(Up to down)
-    p_position.y = 700;
+    p_position.y = ground_level;
+
+
 
     //Loads textures for player
     pTexture.loadFromFile("Hahmo.png");
@@ -71,17 +73,17 @@ void Player::update(float timeGone)
 
     if (isSpaceKeyDown)
     {
-        if (p_position.y >= 400)
+        if (p_position.y >= 550)
         {
-            p_position.y -= p_speed / 2 * timeGone;
+            p_position.y -= p_speed * timeGone;
         }
 
     }
     else if (!isSpaceKeyDown)
     {
-        if (p_position.y < 700)
+        if (p_position.y < ground_level)
         {
-            p_position.y += p_speed / 2 * timeGone;
+            p_position.y += p_speed * timeGone;
         }
     }
 

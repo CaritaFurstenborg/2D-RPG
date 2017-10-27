@@ -9,7 +9,7 @@ Engine::Engine()
     game_screen.create(sf::VideoMode(_resolution.x, _resolution.y), "RPG beta", sf::Style::Fullscreen);
 
     // Loads and sets background
-    game_background_t.loadFromFile("background.jpg");
+    game_background_t.loadFromFile("Tausta.png");
     game_background_s.setTexture(game_background_t);
 
 }

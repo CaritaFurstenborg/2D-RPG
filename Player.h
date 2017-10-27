@@ -16,6 +16,7 @@ private:
     bool isSpaceKeyDown;
 
     float p_speed;
+    const int ground_level = 850;
 
 public:
 

@@ -1,10 +1,11 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <memory.h>
 #include "Player.h"
+
 
 class Engine
 {
-
 private:
 
     //Game screen
